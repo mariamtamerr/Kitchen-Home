@@ -1,11 +1,25 @@
 {
   "global": {
-    "keyFeatures": "الميزات الرئيسية",
-    "customerReviews": "تقييمات العملاء"
+      "keyFeatures": "الميزات الرئيسية",
+      "customerReviews": "تقييمات العملاء",
+      "reserveADate": "احجز موعد",
+      "modalInfo": "بمجرد اختيارك لتاريخ وإدخال معلوماتك، سيتواصل معك قسم خدمة العملاء قريباً.",
+      "name": "أدخل الاسم",
+      "mobile": "أدخل رقم الجوال",
+      "date": "التاريخ",
+      "name2": "الاسم",
+      "mobile2": "رقم الجوال"
+
+  },
+  "alert": {
+    "confirm": "تم تأكيد الحجز!",
+    "notConfirm": "يرجى ملء جميع الحقول."
   },
   "buttons": {
-    "makeAReservation": "احجز الآن"
-},
+      "makeAReservation": "قم بالحجز",
+      "close": "إغلاق",
+      "reserve": "احجز"
+  },
     "navbar": {
       "ourKitchens": "مطابخنا",
       "reservations": "الحجوزات",

@@ -1,10 +1,23 @@
 {
     "global": {
         "keyFeatures": "Key Features",
-        "customerReviews": "Customer Reviews"
+        "customerReviews": "Customer Reviews",
+        "reserveADate": " Reserve A Date",
+        "modalInfo": "Once you choose a date and write your info, customer service will contact you shortly.",
+        "name": "Enter name",
+        "mobile": "Enter Mobile",
+        "date": "Date",
+        "name2": "Name",
+        "mobile2": "Mobile"
     },
     "buttons": {
-        "makeAReservation": "Make A Resevation"
+        "makeAReservation": "Make A Resevation",
+        "close": "Close",
+        "reserve": "Reserve"
+    },
+    "alert": {
+        "confirm": "Reservation confirmed!",
+        "notConfirm": "Please fill in all the fields."
     },
     "navbar": {
       "ourKitchens": "Our Kitchens",

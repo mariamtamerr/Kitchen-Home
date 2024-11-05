@@ -6,7 +6,7 @@
           v-model='name'
           type="name"
           class="peer py-3 px-4 ps-11 block w-full bg-gray-100 border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none d:bg-neutral-700 d:border-transparent d:text-neutral-400 d:placeholder-neutral-500 d:focus:ring-neutral-600"
-          placeholder="Enter name"
+          :placeholder="t('global.name')"
         />
         <div
           class="absolute inset-y-0 start-0 flex items-center pointer-events-none ps-4 peer-disabled:opacity-50 peer-disabled:pointer-events-none"
@@ -34,7 +34,7 @@
           v-model='mobile'
           type="phone"
           class="peer py-3 px-4 ps-11 block w-full bg-gray-100 border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none d:bg-neutral-700 d:border-transparent d:text-neutral-400 d:placeholder-neutral-500 d:focus:ring-neutral-600"
-          placeholder="Enter mobile"
+           :placeholder="t('global.mobile')"
         />
         <div
           class="absolute inset-y-0 start-0 flex items-center pointer-events-none ps-4 peer-disabled:opacity-50 peer-disabled:pointer-events-none"
@@ -60,7 +60,10 @@
 
 <script setup>
 import { ref, defineEmits } from 'vue';
+import { useI18n } from "vue-i18n";
 
+
+const { t } = useI18n()
 const emits = defineEmits(['updateName', 'updateMobile']);
 
 const name = ref('');

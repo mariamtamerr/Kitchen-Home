@@ -28,7 +28,7 @@
               id="hs-basic-modal-label"
               class="font-bold mx-auto text-gray-800 d:text-white"
             >
-              Reserve A Date
+             {{t('global.reserveADate')}}
             </h3>
             <button
               type="button"
@@ -57,8 +57,7 @@
           <div class="p-4 overflow-y-auto text-center">
             <!-- <div class="left"> -->
             <p class="mt-1 text-gray-600 d:text-neutral-400">
-              Once you choose a date and write your info, customer
-              service will contact you shortedly.
+             {{ t('global.modalInfo')}}
             </p>
             <!-- </div> -->
             <div class="right mt-5">
@@ -77,14 +76,14 @@
               class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-300 focus:outline-none focus:bg-gray-50"
               @click="closeModal"
             >
-              Close
+              {{t('buttons.close')}}
             </button>
             <button
             @click="reserveProduct"
               type="button"
               class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-slate-800 text-white hover:bg-slate-500"
             >
-              Reserve
+            {{t('buttons.reserve')}}
             </button>
           </div>
         </div>
@@ -141,9 +140,9 @@ const reserveProduct = () => {
       mobile: mobile.value,
     });
     closeModal();
-    alert('Reservation confirmed!');
+    alert(t("alert.confirm"));
   } else {
-    alert('Please fill in all the fields.');
+    alert(t("alert.notConfirm"));
   }
 };
 </script>
