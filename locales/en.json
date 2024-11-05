@@ -1,0 +1,120 @@
+{
+    "global": {
+        "keyFeatures": "Key Features",
+        "customerReviews": "Customer Reviews"
+    },
+    "buttons": {
+        "makeAReservation": "Make A Resevation"
+    },
+    "navbar": {
+      "ourKitchens": "Our Kitchens",
+      "reservations": "Reservations",
+      "lang": "Language"
+    },
+    "kitchens": {
+        "classic": {
+          "title": "Classic Kitchen",
+          "snippet": "A timeless design that combines elegance with functionality.",
+          "cards": [
+            {
+              "title": "Beige and Wood Finish",
+              "snippet": "This classic kitchen blends warm beige tones with natural wood accents.",
+              "snippet2": [
+                "Warm beige tones",
+                "Natural wood accents",
+                "Classic design"
+              ]
+            },
+            {
+              "title": "Marble Countertops",
+              "snippet": "Featuring elegant marble countertops, this kitchen exudes luxury and comfort.",
+              "snippet2": [
+                "Elegant marble surfaces",
+                "Luxury design",
+                "Easy to clean"
+              ]
+            },
+            {
+              "title": "Traditional Cabinetry",
+              "snippet": "Classic wooden cabinetry with detailed finishes gives this kitchen a timeless look.",
+              "snippet2": [
+                "Classic wooden materials",
+                "Detailed craftsmanship",
+                "Timeless aesthetics"
+              ]
+            }
+          ]
+        },
+        "modern": {
+          "title": "Modern Kitchen",
+          "snippet": "A sleek and minimalist design focused on functionality and clean lines.",
+          "cards": [
+            {
+              "title": "High-Gloss Cabinets",
+              "snippet": "Ultra-modern, high-gloss cabinets give this kitchen a sophisticated look.",
+              "snippet2": [
+                "Ultra-modern design",
+                "High-gloss finishes",
+                "Sophisticated appearance"
+              ]
+            },
+            {
+              "title": "Stainless Steel Appliances",
+              "snippet": "This kitchen features the latest in stainless steel appliances for a modern touch.",
+              "snippet2": [
+                "Latest technology",
+                "Durable stainless steel",
+                "Modern touch"
+              ]
+            },
+            {
+              "title": "Open-Concept Design",
+              "snippet": "An open-concept layout with sleek surfaces and minimal decor.",
+              "snippet2": [
+                "Spacious layout",
+                "Sleek surfaces",
+                "Minimalist decor"
+              ]
+            }
+          ]
+        },
+        "contemporary": {
+          "title": "Contemporary Kitchen",
+          "snippet": "Blends modern elements with unique, artistic touches for a bold look.",
+          "cards": [
+            {
+              "title": "Bold Color Accents",
+              "snippet": "This kitchen features a mix of modern elements with bold color accents for a vibrant look.",
+              "snippet2": [
+                "Modern design elements",
+                "Vibrant color palette",
+                "Creative inspiration"
+              ]
+            },
+            {
+              "title": "Mixed Materials",
+              "snippet": "A combination of wood, metal, and stone gives this kitchen an eclectic, contemporary feel.",
+              "snippet2": [
+                "Eclectic materials",
+                "Contemporary feel",
+                "Unique design choices"
+              ]
+            },
+            {
+              "title": "Unique Lighting Fixtures",
+              "snippet": "Eye-catching lighting fixtures add a unique touch to this kitchen.",
+              "snippet2": [
+                "Unique lighting fixtures",
+                "Bold design element",
+                "Eye-catching aesthetics"
+              ]
+            }
+          ]
+        }
+      },
+  "reservations": {
+    "reservations": "Your Reservations",
+    "noReservationsYet": "No reservations yet. Make a reservation by selecting a kitchen."
+  }
+  }
+  
