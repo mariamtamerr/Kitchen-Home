@@ -2,7 +2,7 @@
 import { useI18n } from 'vue-i18n'
 
 
-const { t} = usei18n();
+const { t } = useI18n();
 
 </script>
 
@@ -19,7 +19,9 @@ const { t} = usei18n();
         </h1>
         <!-- <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.</p> -->
         <div class="mt-10 flex items-center justify-center gap-x-6">
-          <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{to('buttons.start')}}</a>
+          <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            {{t('buttons.start')}}
+          </a>
         </div>
       </div>
     </div>

@@ -67,8 +67,8 @@ const navigation = [
             </div>
           </div>
           <!-- Language dropdown -->
-          <Menu as="div" class="relative inline-block text-left">
-            <MenuButton class="inline-flex justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+          <Menu as="div" class="relative inline-block text-left ">
+            <MenuButton class="inline-flex justify-center  rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
               {{ t('navbar.lang') }}
               <ChevronDownIcon class="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
             </MenuButton>
@@ -87,3 +87,9 @@ const navigation = [
     </div>
   </Disclosure>
 </template>
+
+<style>
+#headlessui-menu-items-v-0-3 {
+  width: fit-content;
+}
+</style>
