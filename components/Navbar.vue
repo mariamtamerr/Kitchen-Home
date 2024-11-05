@@ -1,7 +1,9 @@
 <script setup>
 import { Disclosure, DisclosureButton } from '@headlessui/vue'
-import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
-import { ChevronDownIcon } from '@heroicons/vue/20/solid'
+import { GlobeIcon } from '@heroicons/vue/solid'
+import { ChevronDownIcon } from '@heroicons/vue/solid'
+// import { Bars3Icon, XMarkIcon } from '@heroicons/vue/solid'
+
 import { computed } from 'vue'
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
 import { useReservations } from '~/composables/useProducts'
@@ -72,9 +74,10 @@ const navigation = [
           </div>
           <!-- Language dropdown -->
           <Menu as="div" class="relative inline-block text-left ">
-            <MenuButton class="inline-flex justify-center  rounded-md bg-indigo-950 text-white px-3 py-2 text-sm font-semibold  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 hover:text-slate-800 ">
-              {{ t('navbar.lang') }}
-              <ChevronDownIcon class="mr-1 ml-1 h-5 w-5 text-gray-400" aria-hidden="true" />
+            <MenuButton class="inline-flex justify-center  rounded-md bg-white px-3 py-2 text-sm font-semibold  shadow-sm ring-2 ring-inset ring-gray-600 hover:bg-gray-50 hover:text-slate-800 ">
+              <!-- {{ t('navbar.lang') }} -->
+              <GlobeIcon class="mr-1 ml-1 h-5 w-5 text-gray-800" aria-hidden="true" />
+              <ChevronDownIcon class="mr-1 ml-1 h-5 w-5 text-gray-800" aria-hidden="true" />
             </MenuButton>
             <MenuItems class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
             <MenuItem>
