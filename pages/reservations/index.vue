@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-10 ">
+  <div class="mt-10 min-h-screen ">
     <h2 class="text-2xl text-center font-bold mb-4">{{ t('reservations.reservations') }}</h2>
     <div v-if="reservations.length > 0">
       <div v-for="(reservation, index) in reservations" :key="index"

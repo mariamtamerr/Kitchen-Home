@@ -28,7 +28,7 @@ const largeCardInfo = ref(largeCardSections.map(section => ({
 
       <!-- Title -->
     <div class="max-w-2xl mx-auto text-center mb-6">
-      <p class="mt-1 text-3xl font-semibold text-[#D71F29]">
+      <p class="mt-1 text-3xl font-semibold text-indigo-600">
         {{ t(card.title) }} <!-- Use the translation key for the title -->
       </p>
     </div>
@@ -40,11 +40,11 @@ const largeCardInfo = ref(largeCardSections.map(section => ({
         <div class="TheCardItself" v-for="singleCard in card.cards" :key="singleCard.id">
           <NuxtLink
             class="group hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-xl p-5 transition d:hover:bg-white/10 d:focus:bg-white/10"
-            :to="`/kitchen/${singleCard.id}`"
+            :to="`/kitchens/${singleCard.id}`"
           >
             <div class="aspect-w-16 aspect-h-9 h-80">
               <img
-                class="w-full h-full mx-auto object-cover rounded-xl"
+                class="w-full h-full mx-auto object-cover rounded-xl hover:scale-105 transform transition duration-500 ease-in-out"
                 :src="`/assets/images/${singleCard.image}`"
                 alt="Layer Image"
               />

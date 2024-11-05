@@ -1,5 +1,6 @@
 {
     "global": {
+        "kitchenHome": "Kitchen Home",
         "keyFeatures": "Key Features",
         "customerReviews": "Customer Reviews",
         "reserveADate": " Reserve A Date",
@@ -9,7 +10,11 @@
         "date": "Date",
         "name2": "Name",
         "mobile2": "Mobile",
-        "hero": " Crafting Fabulous Kitchens with care and passion"
+        "hero": " Crafting Fabulous Kitchens with care and passion",
+        "gallery": "Our Gallery",
+        "branch": "Our Branch",
+        "open": " Now open at Arkan plaza",
+        "open2": "Kitchen Home is now open at Arkan Plaza. Check out the variety of luxurious stainless steel & wooden kitchens."
     },
     "buttons": {
         "makeAReservation": "Make A Resevation",
@@ -24,7 +29,7 @@
     "navbar": {
       "ourKitchens": "Our Kitchens",
       "reservations": "Reservations",
-      "lang": "Language"
+      "lang": "Lang"
     },
     "kitchens": {
         "classic": {

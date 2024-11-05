@@ -44,7 +44,9 @@ const navigation = [
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex flex-shrink-0 items-center">
             <NuxtLink to="/">
-              <h1 class="text-xl font-bold text-slate-800">Kitchen Home</h1>
+              <h1 class="text-xl font-bold text-slate-800">
+                {{ t("global.kitchenHome") }}
+              </h1>
             </NuxtLink>
           </div>
         </div>
@@ -52,8 +54,9 @@ const navigation = [
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
               <NuxtLink
-                to='/'
+                to='/kitchens'
                 class="rounded-md px-3 py-2 text-sm font-medium text-slate-800 cursor-pointer hover:bg-gray-700  hover:text-white"
+                  exact-active-class="bg-slate-900 text-white"
               >
                 {{ t('navbar.ourKitchens') }}
               </NuxtLink>
@@ -61,6 +64,7 @@ const navigation = [
               <NuxtLink
                 to='/reservations'
                 class="hover:cursor-pointer rounded-md px-3 py-2 text-sm font-medium text-slate-800 hover:bg-gray-700 hover:text-white" 
+                  exact-active-class="bg-slate-900 text-white"
               >
                 {{ t('navbar.reservations') }} ({{ reservationCount }})
               </NuxtLink>
@@ -68,18 +72,32 @@ const navigation = [
           </div>
           <!-- Language dropdown -->
           <Menu as="div" class="relative inline-block text-left ">
-            <MenuButton class="inline-flex justify-center  rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+            <MenuButton class="inline-flex justify-center  rounded-md bg-indigo-950 text-white px-3 py-2 text-sm font-semibold  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 hover:text-slate-800 ">
               {{ t('navbar.lang') }}
-              <ChevronDownIcon class="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
+              <ChevronDownIcon class="mr-1 ml-1 h-5 w-5 text-gray-400" aria-hidden="true" />
             </MenuButton>
             <MenuItems class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-              <MenuItem>
-                <a @click.prevent="setEnglish" href="#" class="block px-4 py-2 text-sm text-gray-700">En</a>
-              </MenuItem>
-              <MenuItem>
-                <a @click.prevent="setArabic" href="#" class="block px-4 py-2 text-sm text-gray-700">Ar</a>
-              </MenuItem>
-            </MenuItems>
+            <MenuItem>
+              <a 
+                @click.prevent="setEnglish" 
+                href="#" 
+                class="block px-4 py-2 text-sm hover:bg-slate-900 hover:text-white"
+                :class="{'bg-slate-900 text-white': locale === 'en', 'text-gray-700': locale.value !== 'en'}"
+              >
+                En
+              </a>
+            </MenuItem>
+            <MenuItem>
+              <a 
+                @click.prevent="setArabic" 
+                href="#" 
+                class="block px-4 py-2 text-sm hover:bg-slate-900 hover:text-white" 
+                :class="{'bg-slate-900 text-white': locale === 'ar', 'text-gray-700': locale.value !== 'ar'}"
+              >
+                Ar
+              </a>
+            </MenuItem>
+          </MenuItems>
           </Menu>
           <!-- End Language dropdown -->
         </div>
