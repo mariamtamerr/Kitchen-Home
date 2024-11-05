@@ -99,7 +99,7 @@ import { useProducts, useReservations } from '@/composables/useProducts';
 import { useI18n } from "vue-i18n";
 
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 // State variable to track if the modal is open
 const isModalOpen = ref(false);
@@ -128,12 +128,15 @@ const mobile = ref('');
 
 const reserveProduct = () => {
   if (reservationDate.value && name.value && mobile.value) {
+    
+    const dateLocale = locale.value === 'ar' ? 'ar-EG'  : 'en-US';
+
     reservations.value.push({
       product,
-      date: reservationDate.value.toLocaleDateString('en-US', {
-        weekday: 'short',
+      date: reservationDate.value.toLocaleDateString(dateLocale, {
+      weekday: 'long', // Use 'long' for full weekday names
         year: 'numeric',
-        month: 'short',
+        month: 'long', // Use 'long' for full month names
         day: '2-digit',
       }),
       name: name.value,

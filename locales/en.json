@@ -8,12 +8,14 @@
         "mobile": "Enter Mobile",
         "date": "Date",
         "name2": "Name",
-        "mobile2": "Mobile"
+        "mobile2": "Mobile",
+        "hero": " Crafting Fabulous Kitchens with care and passion"
     },
     "buttons": {
         "makeAReservation": "Make A Resevation",
         "close": "Close",
-        "reserve": "Reserve"
+        "reserve": "Reserve",
+        "start": "Get started"
     },
     "alert": {
         "confirm": "Reservation confirmed!",
