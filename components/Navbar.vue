@@ -25,10 +25,15 @@ const setArabic = () => {
   locale.value = "ar"; // Change to Arabic
 };
 
-const navigation = [
+// const navigation = [
+//   { name: t("navbar.ourKitchens"), href: "/kitchens" },
+//   { name: t("navbar.reservations"), href: "/reservations" },
+// ];
+// Reactive navigation array
+const navigation = computed(() => [
   { name: t("navbar.ourKitchens"), href: "/kitchens" },
   { name: t("navbar.reservations"), href: "/reservations" },
-];
+]);
 </script>
 
 <template>
