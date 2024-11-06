@@ -44,7 +44,7 @@ const navigation = [
             <span class="sr-only">Open main menu</span>
             <!-- <Bars3Icon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
             <XMarkIcon v-else class="block h-6 w-6" aria-hidden="true" /> -->
-            <svg v-if="open"  xmlns="http://www.w3.org/2000/svg" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <svg v-if="!open"  xmlns="http://www.w3.org/2000/svg" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
             <svg v-else xmlns="http://www.w3.org/2000/svg" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -90,9 +90,16 @@ const navigation = [
           <!-- Language dropdown -->
           <Menu as="div" class="relative inline-block text-left">
             <MenuButton
-              class="inline-flex justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold shadow-sm ring-2 ring-inset ring-gray-600 hover:bg-gray-50 hover:text-slate-800"
+              class="inline-flex justify-center rounded-md bg-white px-1.5 py-1.5 text-sm font-semibold shadow-sm ring-2 ring-inset ring-gray-600 hover:bg-gray-50 hover:text-slate-800"
             >
-              {{ t('navbar.lang') }}
+              <!-- {{ t('navbar.lang') }} -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2C16.55 2 20 6.45 20 12s-3.45 10-8 10-8-4.45-8-10 3.45-10 8-10z"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2v20"/>
+                <path d="M7 7c2.5 2 5 2 7 0"/>
+              </svg>
               <!-- <GlobeIcon class="mr-1 ml-1 h-5 w-5 text-gray-800" aria-hidden="true" /> -->
               <ChevronDownIcon
                 class="mr-1 ml-1 h-5 w-5 text-gray-800"
@@ -136,7 +143,7 @@ const navigation = [
     </div>
     <!-- mobile hamburger menu all of it  -->
     <DisclosurePanel class="sm:hidden">
-      <div v-if="!open" class="space-y-1 px-2 pb-3 pt-2">
+      <div v-if="open" class="space-y-1 px-2 pb-3 pt-2">
         <DisclosureButton 
         
           v-for="item in navigation"

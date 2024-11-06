@@ -66,7 +66,7 @@
 
             <div class="info">
                 <Info @updateName="(value) => name = value" @updateMobile="(value) => mobile = value" />
-            </div>
+               </div>
           </div>
           <div
             class="flex justify-end items-center gap-x-2 py-3 px-4 border-t d:border-neutral-700"
@@ -97,6 +97,9 @@ import { ref } from "vue";
 import { useRoute } from 'vue-router';
 import { useProducts, useReservations } from '@/composables/useProducts';
 import { useI18n } from "vue-i18n";
+import Swal from 'sweetalert2';
+import toastr from 'toastr';
+import 'toastr/build/toastr.min.css'; // Don't forget to import Toastr styles
 
 
 const { t, locale } = useI18n()
@@ -112,6 +115,8 @@ const openModal = () => {
 // Function to close the modal
 const closeModal = () => {
   isModalOpen.value = false;
+  name.value = '';
+  mobile.value = '';
 };
 
 
@@ -126,26 +131,63 @@ const product = products.value.find(p => p.id === productId) || null;
 const name = ref('');
 const mobile = ref('');
 
+
+toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "newestOnTop": true,
+  "progressBar": true,
+  "positionClass": "toast-top-center", // Customize position
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "10000",
+  "hideDuration": "10000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+};
+
+
 const reserveProduct = () => {
+  const phoneRegex = /^01\d{9}$/;
+
+  // Name validation (Toastr error)
+  if (name.value.length < 10) {
+    toastr.error(t("alert.nameTooShort")); 
+    return;
+  }
+
+  // Mobile validation (Toastr error)
+  if (!phoneRegex.test(mobile.value)) {
+    toastr.error(t("alert.invalidPhone")); 
+    return;
+  }
+
+  // If both validations pass (SweetAlert2 for confirmation)
   if (reservationDate.value && name.value && mobile.value) {
-    
-    const dateLocale = locale.value === 'ar' ? 'ar-EG'  : 'en-US';
+    const dateLocale = locale.value === 'ar' ? 'ar-EG' : 'en-US';
 
     reservations.value.push({
       product,
       date: reservationDate.value.toLocaleDateString(dateLocale, {
-      weekday: 'long', // Use 'long' for full weekday names
+        weekday: 'long',
         year: 'numeric',
-        month: 'long', // Use 'long' for full month names
+        month: 'long',
         day: '2-digit',
       }),
       name: name.value,
       mobile: mobile.value,
     });
-    closeModal();
-    alert(t("alert.confirm"));
+
+    Swal.fire(t("alert.confirm")); // SweetAlert2 for confirmation
+
+    closeModal(); 
   } else {
-    alert(t("alert.notConfirm"));
+    toastr.error(t("alert.notConfirm"));
   }
 };
+
 </script>

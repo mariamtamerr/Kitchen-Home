@@ -22,7 +22,7 @@ const { t } = useI18n()
       to="/kitchens"
       class="flex leading-loose  text-center justify-center text-xl  items-center text-indigo-600 hover:text-indigo-950 font-medium"
     >
-      View more products
+      {{ t('buttons.seeMore')}}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="ml-2 h-5 w-5"

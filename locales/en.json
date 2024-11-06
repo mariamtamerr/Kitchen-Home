@@ -20,11 +20,14 @@
         "makeAReservation": "Make A Resevation",
         "close": "Close",
         "reserve": "Reserve",
-        "start": "Get started"
+        "start": "Get started",
+        "seeMore": "View more products"
     },
     "alert": {
         "confirm": "Reservation confirmed!",
-        "notConfirm": "Please fill in all the fields."
+        "notConfirm": "Please fill in all the fields.",
+        "nameTooShort": "Name must be at least 10 characters long",
+        "invalidPhone": "Phone number must be 11 digits and start with '01'"
     },
     "navbar": {
       "ourKitchens": "Kitchens",
