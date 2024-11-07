@@ -28,6 +28,7 @@
   
   body {
     /* font-family: 'PingAR+LT-Heavy', sans-serif; */
+    overflow-x: hidden
     
   }
   
