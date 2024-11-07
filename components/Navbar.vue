@@ -101,7 +101,7 @@ const navigation = computed(() => [
             </div>
           </div>
           <!-- Language dropdown -->
-          <Menu as="div" class="relative inline-block text-left">
+          <Menu as="div" class="relative ml-6 inline-block text-left">
             <MenuButton
             @click="isOpen=true"
               class="inline-flex justify-center rounded-md bg-white px-1.5 py-1.5 text-sm font-semibold shadow-sm ring-2 ring-inset ring-gray-600 hover:bg-gray-50 hover:text-slate-800"

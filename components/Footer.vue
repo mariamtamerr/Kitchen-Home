@@ -10,7 +10,7 @@ const { t } = useI18n();
 <template>
     <div>
 <!-- ========== FOOTER ========== -->
-<footer class="mt-16  bg-slate-800 w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+<footer class="mt-16  bg-slate-800 w-full max-w-[] py-10 px-4 sm:px- lg:px-8 mx-auto">
   <!-- Grid -->
   <div class="text-center">
     <div>
