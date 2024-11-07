@@ -27,8 +27,8 @@
   @font-face {
     font-family: 'PingAR+LT-Black';
     src: url('@/assets/fonts/Ping/PingAR+LT-Black.otf') format('opentype');
-    /* font-weight: 900; */
-    /* font-style: normal; */
+    /* font-weight: 900;
+    font-style: normal; */
   }
   
   @font-face {
@@ -47,13 +47,14 @@
     /* font-style: normal; */
   }
   
-  /* body {
-    font-family: 'PingAR+LT-Regular', sans-serif;
-  } */
+  body {
+    /* font-family: 'PingAR+LT-Heavy', sans-serif; */
+    
+  }
   
   h2, h1, h3 {
-    font-family: 'PingAR+LT-Medium', sans-serif;
-    line-height: 56px;
+    font-family: 'PingAR+LT-Black', sans-serif;
+    /* line-height: 56px; */
   }
   
   

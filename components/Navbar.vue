@@ -4,7 +4,6 @@ import { Disclosure, DisclosureButton } from "@headlessui/vue";
 import { ChevronDownIcon } from "@heroicons/vue/solid";
 // import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
 
-
 import { computed } from "vue";
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 import { useReservations } from "~/composables/useProducts";
@@ -16,13 +15,22 @@ const reservations = useReservations();
 // Compute the count
 const reservationCount = computed(() => reservations.value.length);
 
+const isOpen = ref(false); 
+
 // Language switch functions
 const setEnglish = () => {
   locale.value = "en"; // Change to English
+  isOpen.value = false; 
 };
+const toggleMenu = () => {
 
+  isOpen.value = !isOpen.value; 
+
+  // Toggle the isOpen state
+};
 const setArabic = () => {
   locale.value = "ar"; // Change to Arabic
+  isOpen.value = false; 
 };
 
 // const navigation = [
@@ -95,6 +103,7 @@ const navigation = computed(() => [
           <!-- Language dropdown -->
           <Menu as="div" class="relative inline-block text-left">
             <MenuButton
+            @click="isOpen=true"
               class="inline-flex justify-center rounded-md bg-white px-1.5 py-1.5 text-sm font-semibold shadow-sm ring-2 ring-inset ring-gray-600 hover:bg-gray-50 hover:text-slate-800"
             >
               <!-- {{ t('navbar.lang') }} -->
@@ -112,11 +121,12 @@ const navigation = computed(() => [
               />
             </MenuButton>
             <MenuItems
-              class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5"
-            >
+            v-show="isOpen"
+      class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5"
+    >
               <MenuItem>
                 <a
-                  @click.prevent="setEnglish"
+                  @click.prevent="setEnglish()"
                   href="#"
                   class="block px-4 py-2 text-sm hover:bg-slate-900 hover:text-white"
                   :class="{
@@ -129,7 +139,7 @@ const navigation = computed(() => [
               </MenuItem>
               <MenuItem>
                 <a
-                  @click.prevent="setArabic"
+                   @click.prevent="setArabic()"
                   href="#"
                   class="block px-4 py-2 text-sm hover:bg-slate-900 hover:text-white"
                   :class="{
